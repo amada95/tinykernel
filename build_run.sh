@@ -6,7 +6,7 @@ as --32 kboot.s -o objects/kboot.o
 
 #compile kernel core files (*.c)
 cd objects/
-gcc -m32 -c ../*.c -std=gnu99 -ffreestanding -fno-stack-protector -Wall -Wextra
+gcc -m32 -c ../*.c -O2 -std=gnu99 -ffreestanding -fno-stack-protector -Wall -Wextra
 cd ..
 
 #link kernel with objectfiles
