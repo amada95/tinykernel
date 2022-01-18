@@ -1,7 +1,7 @@
 # tinykernel
 
 ### about
-a simple kernel/"operating system" I'm writing to help me learn more about operating systems, gnu, c, and x86 assembly
+a simple kernel/"operating system" I'm writing entirely in the GNU `nano` editor to help me learn more about operating systems, gnu, c, and x86 assembly
 
 ## updates section
 as of 1/18/22, I have finished the basic VGA color display driver and configured an automated iso build using `grub` and `qemu`! 
