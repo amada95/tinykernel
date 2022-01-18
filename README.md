@@ -13,5 +13,8 @@ DISCLAIMER/NOTES:
 ### contributing
 please feel free to send over pull requests if you have a neat idea, or just fork this repo as I continue development and play around! this is just a little project I'll be working on in my spare time, however, so please bear with me!
 
+NOTE: if you just have a suggestion or idea, you are welcome to submit an issue to share it :D
+
+
 ### license
 GNU GPLv3 (see LICENSE file)
