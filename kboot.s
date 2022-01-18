@@ -10,7 +10,7 @@
 .long CHECKSUM
 
 
-				# define system stack
+				# system stack
 stackBottom:
 .skip 1024			# maximum stack size of 512 bytes
 stackTop:
