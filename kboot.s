@@ -12,7 +12,7 @@
 
 				# system stack
 stackBottom:
-.skip 1024			# maximum stack size of 512 bytes
+.skip 32000000			# maximum stack size of 16MB
 stackTop:
 
 .section .text
