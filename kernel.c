@@ -3,15 +3,21 @@
 * Kernel core
 */
 
-#include "video.h"
+#include "vga.h"
 
-void kmain(void)
+void kernel_entry(void)
 {
-	const char *str = "hello, world";	// str for testing (hardcoded)
-	char *vmem = (char*)0xb8000;		// video memory begins here, 0xb8000 designates protected mode (25 lines, 80 ASCII chars each)
+	char *str = "hello, world!";			// str for testing (hardcoded)
 
-	buffer_clear(vmem);			// clear video memory
-	buffer_puts(vmem, (char*) str);		// print str to screen
+	vga_init(WHITE, CYAN);				// clear video memory
+
+	vga_print_string(str, WHITE, CYAN);		// print tests to screen
+	vga_print_newline(BLACK, WHITE);
+	vga_print_char('a', BLACK, WHITE);
+	vga_print_int(40967, BRIGHT_GREEN, RED);
+	vga_print_newline(BLACK, WHITE);
+	vga_print_newline(BLACK, WHITE);
+	vga_print_string(":D", WHITE, BLUE);
 
 	return;
 }
