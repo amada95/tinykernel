@@ -5,23 +5,17 @@
 
 #include "vga.h"
 
-#define G_COLOR_PRIMARY WHITE
-#define G_COLOR_SECONDARY CYAN
-#define G_COLOR_TERTIARY BLACK
-
-
 void kernel_entry(void)
 {
-	vga_init(G_COLOR_PRIMARY, CYAN);
+	vga_init(WHITE, CYAN);
 
-	vga_print_string("tinykernel alpha", G_COLOR_PRIMARY, G_COLOR_SECONDARY);	// print tests to screen
-	vga_print_newline(G_COLOR_PRIMARY, G_COLOR_SECONDARY);
-	
+	/* print fancy splash screen */
 	unsigned int i;
-	for(i = 0; i < 80; i++)
-	{
-		vga_print_char(223, G_COLOR_PRIMARY, G_COLOR_SECONDARY);	// ASCII code for top half block char
-	}
+	for(i = 0; i < 2; i++) vga_print_char(176, WHITE, CYAN);	// padding
+	vga_print_string("  tinykernel alpha  ", WHITE, CYAN);		// title
+	for(i = 0; i < 58; i++) vga_print_char(176, WHITE, CYAN);	// padding
+	vga_print_newline(WHITE, CYAN);					// newline
+	for(i = 0; i < 80; i++) vga_print_char(223, WHITE, CYAN);	// padding
 
 	return;
 }
